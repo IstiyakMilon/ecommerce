@@ -13,11 +13,14 @@
 // Frontend Route
 Route::get('/', 'HomeController@index');
 
+// Home Product by Category
+Route::get('/product_by_category/{category_id}', 'HomeController@showProduct_by_Category');
+
 // Backend Route
 
 Route::get('/logout', 'SuperAdminController@logout');
 Route::get('/admin', 'AdminController@index');
-Route::get('/dashboard', 'AdminController@show_dashboard');
+Route::get('/dashboard', 'SuperAdminController@index');
 Route::post('/admin-dashboard', 'AdminController@dashboard');
 
 // Category Route
@@ -54,3 +57,23 @@ Route::get('/add-product', 'ProductController@index');
 Route::post('/save-product', 'ProductController@save_product');
 
 Route::get('/all-product', 'ProductController@all_product');
+
+Route::get('/inactive_product/{product_id}', 'ProductController@inactive_product');
+Route::get('/active_product/{product_id}', 'ProductController@active_product');
+
+Route::get('/edit-product/{product_id}', 'ProductController@edit_product');
+Route::post('/update-product/{product_id}', 'ProductController@update_product');
+Route::get('/delete-product/{product_id}', 'ProductController@delete_product');
+
+// Slider Route
+
+Route::get('/add-slider', 'SliderController@index');
+
+Route::get('/all-slider', 'SliderController@all_slider');
+
+Route::post('/save-slider', 'SliderController@save_slider');
+
+Route::get('/inactive-slider/{slider_id}', 'SliderController@inactive_slider');
+Route::get('/active-slider/{slider_id}', 'SliderController@active_slider');
+
+Route::get('/delete-slider/{slider_id}', 'SliderController@delete_slider');

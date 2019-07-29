@@ -44,9 +44,9 @@
 								<td class="center">{{ $v_category->category_description}}</td>
 								<td class="center">
 								  @if($v_category->publication_status==1)
-									<span class="label label-success">Active</span>
+									<span class="label label-success">Active {{$v_category->publication_status}}</span>
 									@else
-									<span class="label label-danger">Inactive</span>
+									<span class="label label-danger">Inactive {{$v_category->publication_status}}</span>
 									@endif
 								</td>
 								<td class="center">
