@@ -16,6 +16,13 @@ Route::get('/', 'HomeController@index');
 // Home Product by Category
 Route::get('/product_by_category/{category_id}', 'HomeController@showProduct_by_Category');
 
+// Home Product by Brand
+Route::get('/product_by_brand/{brand_id}', 'HomeController@showProduct_by_brand');
+
+// Home View Product details
+
+Route::get('/view_product/{product_id}', 'HomeController@product_details_by_id');
+
 // Backend Route
 
 Route::get('/logout', 'SuperAdminController@logout');

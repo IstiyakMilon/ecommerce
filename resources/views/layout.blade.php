@@ -250,7 +250,7 @@
                 $all_publieshed_brand = DB::table('tbl_brand')->where('publication_status', 1)->get();
                 ?>
 								@foreach($all_publieshed_brand as $brand)
-									<li><a href="#"> <span class="pull-right">(50)</span>{{ $brand->brand_name}}</a></li>
+									<li><a href="{{URL::to('/product_by_brand/'.$brand->brand_id)}}"> <span class="pull-right">(50)</span>{{ $brand->brand_name}}</a></li>
 								@endforeach	
 								</ul>
 							</div>
