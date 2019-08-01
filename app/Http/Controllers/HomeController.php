@@ -26,7 +26,8 @@ class HomeController extends Controller
     {
         $all_product_by_category = DB::table('tbl_products')
                        ->join('tbl_category', 'tbl_products.category_id', '=', 'tbl_category.category_id')
-                       ->select('tbl_products.*', 'tbl_category.category_name')
+                       ->join('tbl_brand', 'tbl_products.brand_id', '=', 'tbl_brand.brand_id')
+                       ->select('tbl_products.*', 'tbl_category.category_name', 'tbl_brand.brand_name')
                        ->where('tbl_category.category_id', $category_id)
                        ->where('tbl_products.publication_status', 1)
                        ->limit(12)

@@ -23,6 +23,17 @@ Route::get('/product_by_brand/{brand_id}', 'HomeController@showProduct_by_brand'
 
 Route::get('/view_product/{product_id}', 'HomeController@product_details_by_id');
 
+// Add To Cart
+Route::post('/add-to-cart', 'CartController@add_to_cart');
+//Show Cart
+Route::get('/show-cart', 'CartController@show_cart');
+
+// Delete a item from cart
+Route::get('/delete-to-cart/{rowId}', 'CartController@delete_to_cart');
+
+// Update a item in the cart
+Route::post('/update-cart', 'CartController@update_cart');
+
 // Backend Route
 
 Route::get('/logout', 'SuperAdminController@logout');

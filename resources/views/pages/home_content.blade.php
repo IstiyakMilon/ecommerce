@@ -17,14 +17,14 @@
             <div class="overlay-content">
               <h2>{{$v_published_product->product_price}} Tk</h2>
               <a href="{{URL::to('view_product/'.$v_published_product->product_id)}}"><p>{{$v_published_product->product_name}}</p></a>
-              <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+              <a href="{{URL::to('view_product/'.$v_published_product->product_id)}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
             </div>
           </div>
       </div>
       
       <div class="choose">
         <ul class="nav nav-pills nav-justified">
-          <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+          <li><a href="#"><i class="fa fa-plus-square"></i>{{$v_published_product->brand_name}}</a></li>
           <li><a href="{{URL::to('view_product/'.$v_published_product->product_id)}}"><i class="fa fa-plus-square"></i>View Product</a></li>
         </ul>
       </div>
