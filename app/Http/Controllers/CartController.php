@@ -34,12 +34,12 @@ class CartController extends Controller
 
     public function show_cart()
     {
-        $all_published_category = DB::table('tbl_category')
+        $all_published_products = DB::table('tbl_products')
                                 ->where('publication_status', 1)
                                 ->get();
-        $manage_published_category = view('pages.add_to_cart')->with('all_published_category', $all_published_category);
+        $manage_published_products = view('pages.add_to_cart')->with('all_published_category', $all_published_products);
 
-        return view('layout')->with('pages.add_to_cart', $manage_published_category);
+        return view('layout')->with('pages.add_to_cart', $manage_published_products);
     }
 
     public function delete_to_cart($rowId)

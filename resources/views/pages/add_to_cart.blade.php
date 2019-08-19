@@ -187,7 +187,7 @@
 							<li>Total <span>{{Cart::total()}}</span></li>
 						</ul>
 							<a class="btn btn-default update" href="">Update</a>
-							<a class="btn btn-default check_out" href="">Check Out</a>
+							<a class="btn btn-default check_out" href="{{URL::to('/login-customer')}}">Check Out</a>
 					</div>
 				</div>
 			</div>

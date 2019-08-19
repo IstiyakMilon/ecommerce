@@ -34,6 +34,9 @@ Route::get('/delete-to-cart/{rowId}', 'CartController@delete_to_cart');
 // Update a item in the cart
 Route::post('/update-cart', 'CartController@update_cart');
 
+// Login for checkout
+Route::get('/login-customer', 'CheckoutController@login_customer');
+
 // Backend Route
 
 Route::get('/logout', 'SuperAdminController@logout');
