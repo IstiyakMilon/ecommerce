@@ -183,11 +183,15 @@
 						<ul>
 							<li>Cart Sub Total <span>{{Cart::subtotal()}} TK</span></li>
 							<li>Eco Tax <span>{{Cart::tax()}} TK</span></li>
-							<li>Shipping Cost <span>50</span></li>
+							<li>Shipping Cost <span>Free</span></li>
 							<li>Total <span>{{Cart::total()}}</span></li>
 						</ul>
 							<a class="btn btn-default update" href="">Update</a>
+							@if(Session::has('customer_id'))
+							<a class="btn btn-default check_out" href="{{URL::to('/checkout')}}">Check Out</a>
+							@else
 							<a class="btn btn-default check_out" href="{{URL::to('/login-customer')}}">Check Out</a>
+							@endif
 					</div>
 				</div>
 			</div>
